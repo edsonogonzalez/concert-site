@@ -1,0 +1,41 @@
+.icon {
+  font-size: 2rem;
+  padding: 0.75em 0;
+  color: $color-white;
+  background: $color-black;
+  width: 30%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(
+      35deg,
+      $color-hover-light 50%,
+      $color-hover-dark 0%
+    );
+    transform: scale(1.1);
+
+    @include lg {
+      background: linear-gradient(
+        16deg,
+        $color-hover-light 50%,
+        $color-hover-dark 0%
+      );
+    }
+  }
+}
+
+.active {
+  &:hover {
+    color: $color-white;
+    cursor: pointer;
+  }
+}
+
+.animate {
+  &:hover {
+    color: $color-accent;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,293 @@
+main {
+  @include lg {
+    margin-top: 7.5em;
+  }
+}
+
+// REMOVE IF DOES NOT WORK
+.show {
+  border-bottom: 2px solid $color-black;
+  width: 95%;
+  margin: 0 auto;
+
+  @include lg {
+    @include flex;
+    border-bottom: 2px solid $color-black;
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 0.85em;
+  }
+}
+
+.grid {
+  display: none;
+
+  @include lg {
+    display: initial;
+    padding-bottom: 0.25em;
+
+    & i {
+      font-size: 1.5em;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+
+    & i:first-of-type {
+      background: $color-white;
+      margin-right: 0.5em;
+      padding: 0.25em;
+    }
+
+    & i:last-of-type {
+      color: $color-black;
+    }
+  }
+}
+// REMOVE IF DOES NOT WORK
+
+.primary__title {
+  text-align: center;
+  margin: 1em 0;
+  text-transform: uppercase;
+  font-size: $large-font-size;
+  font-weight: $base-font-weight;
+  letter-spacing: 1.5px;
+
+  @include md {
+    font-size: 2.75rem;
+  }
+
+  @include lg {
+    font-size: 2.25rem;
+    text-align: start;
+    margin: 0;
+  }
+}
+
+.event {
+  @include site-width;
+  background: $color-white;
+  margin: 1.75em auto;
+  position: relative;
+
+  @include lg {
+    width: 30%;
+    height: 635px; // NEED TO ENABLE
+    // height: 550px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.45em;
+    background: #eeeeee;
+
+    @include lg {
+      padding: 0;
+    }
+
+    & img {
+      width: 40%;
+      margin-right: 0.5em;
+
+      @include md {
+        width: 55%;
+      }
+
+      @include lg {
+        width: 100%;
+        height: 475px; // NEED TO ENABLE
+        // height: 385px;
+        margin-right: 0;
+
+        &:hover {
+          cursor: pointer;
+          filter: brightness(85%);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    @include lg {
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      text-align: center;
+    }
+  }
+
+  &__artist {
+    color: $color-primary;
+    font-weight: $base-font-weight;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+
+    @include md {
+      font-size: 3.25rem;
+    }
+
+    @include lg {
+      font-size: 2.25rem;
+    }
+
+    &--dbl {
+      line-height: 1.15;
+      margin-bottom: 0.15em;
+    }
+  }
+
+  &__tour {
+    font-weight: $base-font-weight;
+    font-family: $font-family-merriweather;
+    font-style: italic;
+    font-size: 1.2rem;
+
+    @include md {
+      font-size: 1.55rem;
+    }
+
+    @include lg {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__date {
+    @include flex;
+    background: $color-black;
+    color: $color-primary;
+    padding: 0.75em 1em;
+    font-weight: $medium-font-weight;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    position: relative;
+
+    & p:first-of-type {
+      @include md {
+        font-size: 2rem;
+      }
+
+      @include lg {
+        font-size: 1.5rem;
+      }
+    }
+
+    &--day {
+      position: absolute;
+      right: 0;
+      bottom: 15%;
+      background: $color-accent;
+      padding: 0.75em;
+      z-index: 1;
+
+      @include md {
+        font-size: 1.85rem;
+      }
+
+      @include md {
+        font-size: 1.5rem;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: $color-accent;
+        transform-origin: bottom left;
+        transform: skew(30deg, 0deg);
+      }
+    }
+  }
+
+  &--ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-primary;
+    color: $color-white;
+    padding: 0.75em 0;
+    text-transform: uppercase;
+
+    @include lg {
+      display: none;
+    }
+
+    & i {
+      font-size: $large-font-size;
+
+      @include md {
+        font-size: 3rem;
+      }
+    }
+
+    & p {
+      text-align: center;
+      width: 40%;
+      font-size: 1.15em;
+
+      @include md {
+        font-size: 2.25rem;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(
+        12.5deg,
+        $color-accent 50%,
+        $color-complement 0%
+      );
+    }
+
+    &:focus {
+      outline-color: transparent;
+      outline-style: solid;
+      box-shadow: 0 0 0 4px $color-white;
+      transition: 0.7s;
+    }
+
+    &:active {
+      background: linear-gradient(
+        12.5deg,
+        $color-accent 50%,
+        $color-complement 0%
+      );
+    }
+  }
+}
+
+.row {
+  @include lg {
+    display: flex;
+    // margin: 0 1em; MAY NEED TO ADD BACK
+    margin: 0;
+  }
+
+  &--arrow {
+    @include lg {
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 1em;
+      font-size: 2em;
+    }
+  }
+}
+
+.arrows i {
+  display: none;
+
+  @include lg {
+    display: contents;
+    color: $color-primary;
+  }
+}

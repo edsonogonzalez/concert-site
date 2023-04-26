@@ -1,0 +1,70 @@
+body {
+  background: $color-background;
+  font-family: $font-family-oswald;
+  font-size: $base-font-size;
+}
+
+header {
+  background: $color-black;
+  padding: 0.5em 0;
+  text-align: center;
+
+  @include lg {
+    padding: 0;
+  }
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+i {
+  color: $color-white;
+}
+
+.container {
+  @include site-width;
+  position: relative;
+
+  @include lg {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header {
+  @include flex;
+
+  @include lg {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    padding: 0;
+  }
+
+  &__logo {
+    font-family: $font-family-lato;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-white;
+    background: $color-complement;
+    background: linear-gradient(65deg, $color-accent 62%, $color-complement 0%);
+    padding: 1em;
+    font-weight: $large-font-weight;
+    letter-spacing: 2px;
+
+    @include lg {
+      z-index: 10;
+    }
+
+    &--text {
+      font-size: $large-font-size;
+      text-transform: uppercase;
+    }
+  }
+}

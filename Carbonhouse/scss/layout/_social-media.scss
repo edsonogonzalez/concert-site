@@ -1,0 +1,136 @@
+.social-area {
+  background: $color-white;
+  padding: 1em 0;
+
+  @include lg {
+    width: 100%;
+  }
+
+  &__icons {
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.tweet-box {
+  @include site-width;
+  background: $color-background;
+  padding: 1em 0;
+
+  &__user {
+    font-size: 1.5rem;
+    font-weight: $base-font-weight;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.75em 0 0.75em 1.25em;
+
+    & span {
+      color: $color-primary;
+    }
+  }
+
+  &__inner {
+    background: $color-white;
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em;
+
+    & p {
+      font-size: 1.4rem;
+      margin-bottom: 2.5em;
+    }
+
+    &--header {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-size: 1.25em;
+      text-transform: uppercase;
+      margin-bottom: 0.75em;
+
+      & i {
+        color: $color-primary;
+      }
+
+      & h4 {
+        font-weight: $base-font-weight;
+        letter-spacing: 2px;
+        margin-left: 0.3em;
+      }
+    }
+
+    &--secondary {
+      display: none;
+
+      @include lg {
+        display: inherit;
+      }
+    }
+  }
+
+  &__share {
+    background: $color-primary;
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 0.5em auto;
+    display: flex;
+    justify-content: space-between;
+    color: $color-white;
+    padding: 0.5em 0.75em;
+
+    &--symbols {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & i {
+        font-size: 0.8em;
+        margin-right: 0.65em;
+      }
+    }
+
+    &--secondary {
+      display: none;
+
+      @include lg {
+        display: flex;
+      }
+    }
+  }
+}
+
+.handle {
+  text-decoration: none;
+  color: $color-primary;
+
+  &--wrap {
+    word-wrap: break-word;
+  }
+}
+
+.area-title {
+  padding: 1em 0 0 0.6em;
+
+  @include lg {
+    padding: 1em 0 0 1em;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: $base-font-weight;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-family: $font-family-merriweather;
+    font-size: 1.15rem;
+    font-weight: $medium-font-weight;
+    font-style: italic;
+    color: $color-primary;
+    letter-spacing: 1px;
+  }
+}

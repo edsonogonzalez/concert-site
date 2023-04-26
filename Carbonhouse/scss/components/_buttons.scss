@@ -1,0 +1,102 @@
+.btn {
+  cursor: pointer;
+  background: $color-primary;
+  color: $color-white;
+  border: none;
+  box-shadow: 3px 3px $color-accent;
+  padding: 0.25em 0.75em;
+  min-height: 2em;
+  min-width: 3em;
+
+  @include lg {
+    box-shadow: none;
+  }
+}
+
+.btn--search {
+  width: 55px;
+  height: 55px;
+  font-size: 1.2rem;
+  background: $color-white;
+  color: $color-black;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+  @include lg {
+    width: 10px;
+    height: 30px;
+    background: $color-background;
+    font-size: 1em;
+  }
+
+  & i {
+    color: $color-black;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &:hover {
+    background: $color-primary;
+    color: $color-white;
+  }
+
+  &:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px $color-primary;
+    transition: 0.7s;
+  }
+
+  &:active {
+    background-color: $color-primary;
+  }
+}
+
+.btn--signup {
+  font-family: $font-family-oswald;
+  font-size: 1em;
+  font-weight: $base-font-weight;
+  width: 95%;
+  letter-spacing: 2px;
+  color: $color-white;
+  background: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border: 3px solid $color-white;
+  transition: all 0.5s ease-in-out;
+
+  @include lg {
+    width: 40%;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      12.5deg,
+      $color-hover-light 50%,
+      $color-hover-dark 0%
+    );
+    transform: scale(1.1);
+
+    @include lg {
+      background: linear-gradient(
+        10deg,
+        $color-hover-light 50%,
+        $color-hover-dark 0%
+      );
+    }
+  }
+
+  &:focus {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 4px $color-primary;
+    transition: 0.7s;
+  }
+
+  &:active {
+    background-color: $color-primary;
+  }
+}

@@ -1,0 +1,69 @@
+.signup {
+  position: relative;
+  text-align: center;
+  background: $color-white;
+
+  &__image {
+    height: 475px;
+
+    @include md {
+      height: 555px;
+    }
+
+    @include lg {
+      width: 100%;
+      height: 650px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    background: hsla(0, 0%, 0%, 0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 55px 15px;
+    text-align: center;
+
+    @include md {
+      width: 75%;
+      padding: 55px 65px;
+    }
+
+    @include lg {
+      width: 50%;
+      height: 70%;
+    }
+
+    &--heading {
+      font-size: 2.5em;
+      font-weight: $base-font-weight;
+      line-height: 1;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: $color-white;
+      margin-bottom: 0.25em;
+
+      @include lg {
+        margin: 1.5em 0 0.5em 0;
+      }
+    }
+
+    &--text {
+      font-family: $font-family-merriweather;
+      font-style: italic;
+      color: $color-primary;
+      margin-bottom: 1.5em;
+      width: 325px;
+
+      @include md {
+        width: 385px;
+        margin: 1.5em auto;
+      }
+
+      @include lg {
+        width: 100%;
+      }
+    }
+  }
+}
